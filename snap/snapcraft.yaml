@@ -6,6 +6,7 @@ description: |
 grade: devel # must be 'stable' to release into candidate/stable channels
 confinement: devmode # use 'strict' once you have the right plugs and slots
 icon: ./fptr500.png
+
 apps:      
   cloudfprint:
     command: usr/lib/jvm/default-java/bin/java -jar $SNAP/cloudfprint.jar start
@@ -15,7 +16,7 @@ apps:
     daemon: simple
     restart-condition: always
     plugs: [network, network-bind]
-  fptr10_t:
+  fptr10:
     command: $SNAP/libs/fptr10_t.sh
     plugs: 
       - x11

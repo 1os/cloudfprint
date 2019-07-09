@@ -6,3 +6,9 @@ prime
 stage
 *.snap
 *.tar.bz2
+
+# Ignore Git here
+.git
+
+# But not these files...
+!.gitignore

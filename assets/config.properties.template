@@ -1,0 +1,36 @@
+# Не нужно использовать этот файл, искать принтеры автоматически
+autoload=true
+
+# Поддерживаемые значения Atol EscPos Shtrih
+deviceType=Atol
+
+# ИНН для привязки устройств к вам
+INN=
+
+# если у вас принтер Atol, например FPrint-22ПТК
+atolDeviceModel=500
+AtolPort=USB$
+
+# если у вас принтер типа EscPos (printer epson epson.UTF8 epson.CP1251)
+EscPosType=printer
+# точное название принтера в системе
+EscPosName=DCP7057W
+EscPosPort=
+# Отступ по горизонтали от верхнего левого угла чека
+EscPosX=20
+# Отступ по вертикали от верхнего левого угла чека
+EscPosY=10
+# Ширина чека
+EscPosWidth=136
+# Выстока чека
+EscPosHeight=60000
+EscPosMediaSize=A4
+# Серийник принтера, используется для идентификации, должен быть уникальный для ваших устройств
+EscPosSerialNum=00123322
+# Использовать шаблон чека
+EscPosTemplate=false
+# Количество символов в строке
+EscPosChars=47
+
+# если Shtrih
+noconfigs=true

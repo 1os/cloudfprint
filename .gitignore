@@ -1,0 +1,8 @@
+﻿
+.vscode
+parts
+prime
+.snapcraft
+stage
+*.snap
+*.tar.bz2

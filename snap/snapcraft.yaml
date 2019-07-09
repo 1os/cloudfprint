@@ -17,7 +17,7 @@ apps:
     restart-condition: always
     plugs: [network, network-bind]
   fptr10:
-    command: $SNAP/libs/fptr10_t.sh
+    command: libs/fptr10_t.sh
     plugs: 
       - x11
       - opengl

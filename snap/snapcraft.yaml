@@ -17,7 +17,13 @@ apps:
     plugs: [network, network-bind]
   fptr10_t:
     command: $SNAP/libs/fptr10_t.sh
-    plugs: [network, network-bind, desktop]
+    plugs: 
+      - x11
+      - opengl
+      - unity7
+      - home
+      - network
+      - network-bind
 
 parts:
   assets:

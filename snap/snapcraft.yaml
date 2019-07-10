@@ -34,8 +34,9 @@ parts:
   assets:
     source: assets/
     plugin: dump
-    stage-packages:
-      - default-jdk
+    build-packages:
       - ca-certificates
       - ca-certificates-java
+    stage-packages:
+      - default-jdk
   

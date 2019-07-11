@@ -23,7 +23,7 @@ apps:
     restart-condition: always
     plugs: [network, network-bind, raw-usb, hardware-observe, io-ports-control]
   fptr10:
-    command: libs/$SNAP_ARCH/fptr10_t.sh
+    command: libs/fptr10_t.sh
     plugs: 
       - x11
       - opengl

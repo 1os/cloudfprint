@@ -1,8 +1,8 @@
 name: cloudfprint
 #base: core18
 #title: Bitrix24 Cloud Cash Machine
-architectures:
-  - build-on: [amd64, i386, armhf, arm64]
+#architectures:
+#  - build-on: [amd64, i386, armhf, arm64]
 version: '0.1'
 summary: Bitrix24 Cloud Cash Machine # 79 char long summary
 description: |

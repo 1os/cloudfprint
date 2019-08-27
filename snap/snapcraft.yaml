@@ -16,7 +16,7 @@ icon: ./fptr500.png
 
 apps:    
   cloudfprint:
-    command: usr/lib/jvm/default-java/bin/java -Duser.language=RU -Duser.region=ru -Duser.dir=$SNAP/ -Djava.library.path=$SNAP/libs/ -jar $SNAP/cloudfprint.jar start
+    command: cd $SNAP/ && usr/lib/jvm/default-java/bin/java -Duser.language=RU -Duser.region=ru -Duser.dir=$SNAP/ -Djava.library.path=$SNAP/libs/ -jar $SNAP/cloudfprint.jar start
     stop-command: usr/lib/jvm/default-java/bin/java -jar $SNAP/cloudfprint.jar stop
     stop-timeout: 10s
     environment:

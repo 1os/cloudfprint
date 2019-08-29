@@ -1,9 +1,9 @@
 #!/bin/sh
 
-echo '<?xml version="1.0" encoding="utf-8" ?>' > $SNAP/eou/settings.xml
-echo '<settings>' >> $SNAP/eou/settings.xml
-echo '<hotplug>auto</hotplug>' >> $SNAP/eou/settings.xml
-echo '<logs><dir>' >> $SNAP/eou/settings.xml
-echo $SNAP_USER_COMMON >> $SNAP/eou/settings.xml
-echo '/EoU</dir></logs>' >> $SNAP/eou/settings.xml
-echo '</settings>' >> $SNAP/eou/settings.xml
+#echo '<?xml version="1.0" encoding="utf-8" ?>' > $SNAP/eou/settings.xml
+#echo '<settings>' >> $SNAP/eou/settings.xml
+#echo '<hotplug>auto</hotplug>' >> $SNAP/eou/settings.xml
+#echo '<logs><dir>' >> $SNAP/eou/settings.xml
+#echo $SNAP_USER_COMMON >> $SNAP/eou/settings.xml
+#echo '/EoU</dir></logs>' >> $SNAP/eou/settings.xml
+#echo '</settings>' >> $SNAP/eou/settings.xml

@@ -25,6 +25,11 @@ apps:
     daemon: simple
     restart-condition: always
     plugs: [network, network-bind, raw-usb, hardware-observe, io-ports-control]
+  eou:
+    command: eou/EthOverUsb.sh -e
+    daemon: simple
+    restart-condition: always
+    plugs: [network, network-bind, raw-usb, hardware-observe, io-ports-control]
   fptr10:
     command: libs/fptr10_t.sh
     plugs: 
@@ -51,6 +56,15 @@ parts:
       - on i386:  https://cloudfprint.blob.core.windows.net/client/i386.zip
       - on armhf: https://cloudfprint.blob.core.windows.net/client/armhf.zip
       - on arm64: https://cloudfprint.blob.core.windows.net/client/arm64.zip
+    source-type: zip
+    after: [assets]
+  eou:
+    plugin: dump
+    source:
+      - on amd64: https://cloudfprint.blob.core.windows.net/client/eou-amd64.zip
+      - on i386:  https://cloudfprint.blob.core.windows.net/client/eou-i386.zip
+      - on armhf: https://cloudfprint.blob.core.windows.net/client/eou-armhf.zip
+      - on arm64: https://cloudfprint.blob.core.windows.net/client/eou-armhf.zip
     source-type: zip
     after: [assets]
   

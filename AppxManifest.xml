@@ -5,7 +5,7 @@
     xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3" 
     xmlns:iot="http://schemas.microsoft.com/appx/manifest/iot/windows10" IgnorableNamespaces="mp uap uap3 iot">
 
-    <Identity Name="CloudFPrint" Publisher="CN=FirstOpenSystems" Version="2019.09.11" />
+    <Identity Name="CloudFPrint" Publisher="CN=FirstOpenSystems" Version="2019.10.18" />
 
     <Properties>
         <DisplayName>CloudFPrint</DisplayName>

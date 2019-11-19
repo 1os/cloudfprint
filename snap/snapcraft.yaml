@@ -6,7 +6,7 @@ architectures:
   - build-on: amd64
   - build-on: armhf
   - build-on: arm64
-version: '2019.11.14'
+version: '2019.11.19'
 summary: Bitrix24 Cloud Cash Machine # 79 char long summary
 description: |
   This app connect your cash machine to Bitrix24
@@ -41,9 +41,13 @@ apps:
       - network-bind
 
 parts:
+  jar:
+    source: https://cloudfprint.blob.core.windows.net/client/cloudfprint.jar
+    plugin: dump
   assets:
     source: assets/
     plugin: dump
+    after: [jar]
     build-packages:
       - ca-certificates
       - ca-certificates-java

@@ -1,36 +1,42 @@
-# Не нужно использовать этот файл, искать принтеры автоматически
+# if you need auto configuration
 autoload=true
 
-# Поддерживаемые значения Atol EscPos Shtrih
+# choose printer type (Atol EscPos Url)
 deviceType=Atol
 
-# ИНН для привязки устройств к вам
+# your VAT number
 INN=
 
-# если у вас принтер Atol, например FPrint-22ПТК
+# Atol config section
 atolDeviceModel=500
 AtolPort=USB$
 
-# если у вас принтер типа EscPos (printer epson epson.UTF8 epson.CP1251)
+# EscPos section
+# type of escpos printer (printer epson epson.printer epson.UTF8 epson.CP07 epson.CP1251 epson.CP866)
 EscPosType=printer
-# точное название принтера в системе
+# printer name in OS pool (DCP-7057W POS-58)
 EscPosName=DCP7057W
+# port (/dev/usb/lp0 COM4)
 EscPosPort=
-# Отступ по горизонтали от верхнего левого угла чека
-EscPosX=20
-# Отступ по вертикали от верхнего левого угла чека
-EscPosY=10
-# Ширина чека
-EscPosWidth=136
-# Выстока чека
-EscPosHeight=60000
+# string character wide
+EscPosChars=32
+# left margin
+EscPosX=14
+# top margin
+EscPosY=14
+# width in pixels
+EscPosWidth=156
+# height in pixels
+EscPosHeight=600
 EscPosMediaSize=A4
-# Серийник принтера, используется для идентификации, должен быть уникальный для ваших устройств
+# virtual serial number of this printer
 EscPosSerialNum=00123322
-# Использовать шаблон чека
+# use ticket template
 EscPosTemplate=false
-# Количество символов в строке
-EscPosChars=47
 
-# если Shtrih
-noconfigs=true
+# Url section
+# jar url to load (https://yoursite.com/driver.jar)
+UrlLoadJarUrl=
+# fill class name to load (needs to implement IDevice interface) (com.yourcorp.DriverClass)
+UrlFullClassName=
+UrlSetupParameters=

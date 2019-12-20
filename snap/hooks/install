@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -e
 
 #echo '<?xml version="1.0" encoding="utf-8" ?>' > $SNAP/eou/settings.xml
 #echo '<settings>' >> $SNAP/eou/settings.xml
@@ -7,3 +7,46 @@
 #echo $SNAP_USER_COMMON >> $SNAP/eou/settings.xml
 #echo '/EoU</dir></logs>' >> $SNAP/eou/settings.xml
 #echo '</settings>' >> $SNAP/eou/settings.xml
+
+# if you need auto configuration
+snapctl set autoload=true
+
+# choose printer type (Atol EscPos Url)
+snapctl set devicetype=Atol
+
+# your VAT number
+snapctl set inn=
+
+# Atol config section
+snapctl set atol.devicemodel=500
+snapctl set atol.port=USB$
+
+# EscPos section
+# type of escpos printer (printer epson epson.printer epson.UTF8 epson.CP07 epson.CP1251 epson.CP866)
+snapctl set escpos.type=printer
+# printer name in OS pool (DCP-7057W POS-58)
+snapctl set escpos.name=DCP7057W
+# port (/dev/usb/lp0 COM4)
+snapctl set escpos.port=
+# string character wide
+snapctl set escpos.chars=32
+# left margin
+snapctl set escpos.x=14
+# top margin
+snapctl set escpos.y=14
+# width in pixels
+snapctl set escpos.width=156
+# height in pixels
+snapctl set escpos.height=600
+snapctl set escpos.mediasize=A4
+# virtual serial number of this printer
+snapctl set escpos.serialnum=00123322
+# use ticket template
+snapctl set escpos.template=false
+
+# Url section
+# jar url to load (https://yoursite.com/driver.jar)
+snapctl set url.loadjarurl=
+# fill class name to load (needs to implement IDevice interface) (com.yourcorp.DriverClass)
+snapctl set url.fullclassname=
+snapctl set url.setupparameters=

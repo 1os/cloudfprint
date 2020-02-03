@@ -6,10 +6,10 @@ architectures:
   - build-on: amd64
   - build-on: armhf
   - build-on: arm64
-version: '2020.01.20'
-summary: Bitrix24 Cloud Cash Machine # 79 char long summary
+version: '2020.02.03'
+summary: Bitrix24 Cloud POS # 79 char long summary
 description: |
-  This app connect your cash machine to Bitrix24
+  This app connect your POS to Bitrix24
 grade: stable # must be 'stable' to release into candidate/stable channels
 confinement: strict # use 'strict' once you have the right plugs and slots
 icon: ./fptr500.png

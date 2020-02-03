@@ -43,4 +43,4 @@ echo "# fill class name to load (needs to implement IDevice interface) (com.your
 echo "UrlFullClassName=$(snapctl get url.fullclassname)" >> $SNAP_DATA/config.properties
 echo "UrlSetupParameters=$(snapctl get url.setupparameters)" >> $SNAP_DATA/config.properties
 
-snap restart cloudfprint
+#snap restart cloudfprint

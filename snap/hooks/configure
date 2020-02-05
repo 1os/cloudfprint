@@ -1,46 +1,46 @@
 #!/bin/sh -e
 
-echo "# if you need auto configuration" > $SNAP_DATA/config.properties
-echo "autoload=$(snapctl get autoload)" >> $SNAP_DATA/config.properties
-echo "" >> $SNAP_DATA/config.properties
-echo "# choose printer type (Atol EscPos Url)" >> $SNAP_DATA/config.properties
-echo "deviceType=$(snapctl get devicetype)" >> $SNAP_DATA/config.properties
-echo "" >> $SNAP_DATA/config.properties
-echo "# your VAT number" >> $SNAP_DATA/config.properties
-echo "INN=$(snapctl get inn)" >> $SNAP_DATA/config.properties
-echo "" >> $SNAP_DATA/config.properties
-echo "# Atol config section" >> $SNAP_DATA/config.properties
-echo "AtolDeviceModel=$(snapctl get atol.devicemodel)" >> $SNAP_DATA/config.properties
-echo "AtolPort=$(snapctl get atol.port)" >> $SNAP_DATA/config.properties
-echo "" >> $SNAP_DATA/config.properties
-echo "# EscPos section" >> $SNAP_DATA/config.properties
-echo "# type of escpos printer (printer epson epson.printer epson.UTF8 epson.CP07 epson.CP1251 epson.CP866)" >> $SNAP_DATA/config.properties
-echo "EscPosType=$(snapctl get escpos.type)" >> $SNAP_DATA/config.properties
-echo "# printer name in OS pool (DCP-7057W POS-58)" >> $SNAP_DATA/config.properties
-echo "EscPosName=$(snapctl get escpos.name)" >> $SNAP_DATA/config.properties
-echo "# port (/dev/usb/lp0 COM4)" >> $SNAP_DATA/config.properties
-echo "EscPosPort=$(snapctl get escpos.port)" >> $SNAP_DATA/config.properties
-echo "# string character wide" >> $SNAP_DATA/config.properties
-echo "EscPosChars=$(snapctl get escpos.chars)" >> $SNAP_DATA/config.properties
-echo "# left margin" >> $SNAP_DATA/config.properties
-echo "EscPosX=$(snapctl get escpos.x)" >> $SNAP_DATA/config.properties
-echo "# top margin" >> $SNAP_DATA/config.properties
-echo "EscPosY=$(snapctl get escpos.y)" >> $SNAP_DATA/config.properties
-echo "# width in pixels" >> $SNAP_DATA/config.properties
-echo "EscPosWidth=$(snapctl get escpos.width)" >> $SNAP_DATA/config.properties
-echo "# height in pixels" >> $SNAP_DATA/config.properties
-echo "EscPosHeight=$(snapctl get escpos.height)" >> $SNAP_DATA/config.properties
-echo "EscPosMediaSize=$(snapctl get escpos.mediasize)" >> $SNAP_DATA/config.properties
-echo "# virtual serial number of this printer" >> $SNAP_DATA/config.properties
-echo "EscPosSerialNum=$(snapctl get escpos.serialnum)" >> $SNAP_DATA/config.properties
-echo "# use ticket template" >> $SNAP_DATA/config.properties
-echo "EscPosTemplate=$(snapctl get escpos.template)" >> $SNAP_DATA/config.properties
-echo "" >> $SNAP_DATA/config.properties
-echo "# Url section" >> $SNAP_DATA/config.properties
-echo "# jar url to load (https://yoursite.com/driver.jar)" >> $SNAP_DATA/config.properties
-echo "UrlLoadJarUrl=$(snapctl get url.loadjarurl)" >> $SNAP_DATA/config.properties
-echo "# fill class name to load (needs to implement IDevice interface) (com.yourcorp.DriverClass)" >> $SNAP_DATA/config.properties
-echo "UrlFullClassName=$(snapctl get url.fullclassname)" >> $SNAP_DATA/config.properties
-echo "UrlSetupParameters=$(snapctl get url.setupparameters)" >> $SNAP_DATA/config.properties
+echo "# if you need auto configuration" > $SNAP_COMMON/config.properties
+echo "autoload=$(snapctl get autoload)" >> $SNAP_COMMON/config.properties
+echo "" >> $SNAP_COMMON/config.properties
+echo "# choose printer type (Atol EscPos Url)" >> $SNAP_COMMON/config.properties
+echo "deviceType=$(snapctl get devicetype)" >> $SNAP_COMMON/config.properties
+echo "" >> $SNAP_COMMON/config.properties
+echo "# your VAT number" >> $SNAP_COMMON/config.properties
+echo "INN=$(snapctl get inn)" >> $SNAP_COMMON/config.properties
+echo "" >> $SNAP_COMMON/config.properties
+echo "# Atol config section" >> $SNAP_COMMON/config.properties
+echo "AtolDeviceModel=$(snapctl get atol.devicemodel)" >> $SNAP_COMMON/config.properties
+echo "AtolPort=$(snapctl get atol.port)" >> $SNAP_COMMON/config.properties
+echo "" >> $SNAP_COMMON/config.properties
+echo "# EscPos section" >> $SNAP_COMMON/config.properties
+echo "# type of escpos printer (printer epson epson.printer epson.UTF8 epson.CP07 epson.CP1251 epson.CP866)" >> $SNAP_COMMON/config.properties
+echo "EscPosType=$(snapctl get escpos.type)" >> $SNAP_COMMON/config.properties
+echo "# printer name in OS pool (DCP-7057W POS-58)" >> $SNAP_COMMON/config.properties
+echo "EscPosName=$(snapctl get escpos.name)" >> $SNAP_COMMON/config.properties
+echo "# port (/dev/usb/lp0 COM4)" >> $SNAP_COMMON/config.properties
+echo "EscPosPort=$(snapctl get escpos.port)" >> $SNAP_COMMON/config.properties
+echo "# string character wide" >> $SNAP_COMMON/config.properties
+echo "EscPosChars=$(snapctl get escpos.chars)" >> $SNAP_COMMON/config.properties
+echo "# left margin" >> $SNAP_COMMON/config.properties
+echo "EscPosX=$(snapctl get escpos.x)" >> $SNAP_COMMON/config.properties
+echo "# top margin" >> $SNAP_COMMON/config.properties
+echo "EscPosY=$(snapctl get escpos.y)" >> $SNAP_COMMON/config.properties
+echo "# width in pixels" >> $SNAP_COMMON/config.properties
+echo "EscPosWidth=$(snapctl get escpos.width)" >> $SNAP_COMMON/config.properties
+echo "# height in pixels" >> $SNAP_COMMON/config.properties
+echo "EscPosHeight=$(snapctl get escpos.height)" >> $SNAP_COMMON/config.properties
+echo "EscPosMediaSize=$(snapctl get escpos.mediasize)" >> $SNAP_COMMON/config.properties
+echo "# virtual serial number of this printer" >> $SNAP_COMMON/config.properties
+echo "EscPosSerialNum=$(snapctl get escpos.serialnum)" >> $SNAP_COMMON/config.properties
+echo "# use ticket template" >> $SNAP_COMMON/config.properties
+echo "EscPosTemplate=$(snapctl get escpos.template)" >> $SNAP_COMMON/config.properties
+echo "" >> $SNAP_COMMON/config.properties
+echo "# Url section" >> $SNAP_COMMON/config.properties
+echo "# jar url to load (https://yoursite.com/driver.jar)" >> $SNAP_COMMON/config.properties
+echo "UrlLoadJarUrl=$(snapctl get url.loadjarurl)" >> $SNAP_COMMON/config.properties
+echo "# fill class name to load (needs to implement IDevice interface) (com.yourcorp.DriverClass)" >> $SNAP_COMMON/config.properties
+echo "UrlFullClassName=$(snapctl get url.fullclassname)" >> $SNAP_COMMON/config.properties
+echo "UrlSetupParameters=$(snapctl get url.setupparameters)" >> $SNAP_COMMON/config.properties
 
 #snap restart cloudfprint

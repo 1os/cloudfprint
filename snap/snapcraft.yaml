@@ -1,12 +1,12 @@
 name: cloudfprint
-#base: core18
+base: core20
 #title: Bitrix24 Cloud Cash Machine
 architectures:
   - build-on: i386
   - build-on: amd64
   - build-on: armhf
   - build-on: arm64
-version: '2020.03.26'
+version: '2020.08.19'
 summary: Bitrix24 Cloud POS # 79 char long summary
 description: |
   This app connect your POS to Bitrix24

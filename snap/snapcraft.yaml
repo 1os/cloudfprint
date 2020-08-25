@@ -17,10 +17,10 @@ icon: ./fptr500.png
 apps:    
   cloudfprint:
     command: run.sh
-    stop-command: $SNAP/usr/lib/jvm/default-java/bin/java -jar $SNAP/cloudfprint.jar stop
+    stop-command: ${SNAP}/usr/lib/jvm/java-8-openjdk-${SNAP_ARCH}/bin/java -jar $SNAP/cloudfprint.jar stop
     stop-timeout: 10s
     environment:
-      JAVA_HOME: $SNAP/usr/lib/jvm/default-java
+      JAVA_HOME: ${SNAP}/usr/lib/jvm/java-8-openjdk-${SNAP_ARCH}
       PATH: $JAVA_HOME/jre/bin:$PATH:$SNAP/libs/
     daemon: simple
     restart-condition: always

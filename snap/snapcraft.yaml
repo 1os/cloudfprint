@@ -30,18 +30,6 @@ apps:
     daemon: simple
     restart-condition: always
     plugs: [network, network-bind, raw-usb, hardware-observe, io-ports-control]
-  fptr10:
-    command: libs/fptr10_t.sh
-    extensions:
-      - kde-neon
-    plugs: 
-      - kde-frameworks-5-plug
-      - x11
-      - opengl
-      - unity7
-      - home
-      - network
-      - network-bind
 
 parts:
 #  jar:

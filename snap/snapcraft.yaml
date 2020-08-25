@@ -52,7 +52,7 @@ parts:
       - on armhf: https://cloudfprint.blob.core.windows.net/client/armhf.zip
       - on arm64: https://cloudfprint.blob.core.windows.net/client/arm64.zip
     source-type: zip
-    after: [assets, desktop-qt5]
+    after: [assets]
   eou:
     plugin: dump
     source:

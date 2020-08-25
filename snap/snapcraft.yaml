@@ -17,7 +17,7 @@ icon: ./fptr500.png
 apps:    
   cloudfprint:
     command: run.sh
-    stop-command: usr/lib/jvm/default-java/bin/java -jar $SNAP/cloudfprint.jar stop
+    stop-command: $SNAP/usr/lib/jvm/default-java/bin/java -jar $SNAP/cloudfprint.jar stop
     stop-timeout: 10s
     environment:
       JAVA_HOME: $SNAP/usr/lib/jvm/default-java

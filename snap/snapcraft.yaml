@@ -17,10 +17,10 @@ icon: ./fptr500.png
 apps:    
   cloudfprint:
     command: run.sh
-    stop-command: ${SNAP}/usr/lib/jvm/java-8-openjdk-${SNAP_ARCH}/bin/java -jar $SNAP/cloudfprint.jar stop
+    stop-command: ${SNAP}/usr/lib/jvm/java-11-openjdk-${SNAP_ARCH}/bin/java -jar $SNAP/cloudfprint.jar stop
     stop-timeout: 10s
     environment:
-      JAVA_HOME: ${SNAP}/usr/lib/jvm/java-8-openjdk-${SNAP_ARCH}
+      JAVA_HOME: ${SNAP}/usr/lib/jvm/java-11-openjdk-${SNAP_ARCH}
       PATH: $JAVA_HOME/jre/bin:$PATH:$SNAP/libs/
     daemon: simple
     restart-condition: always
@@ -39,11 +39,10 @@ parts:
     source: assets/
     plugin: dump
 #    after: [jar]
-    build-packages:
-      - ca-certificates
-      - ca-certificates-java
     stage-packages:
       - default-jdk
+      - ca-certificates
+      - ca-certificates-java
   libs:
     plugin: dump
     source:

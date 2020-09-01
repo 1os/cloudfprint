@@ -39,6 +39,9 @@ parts:
     source: assets/
     plugin: dump
 #    after: [jar]
+    build-packages:
+      - ca-certificates
+      - ca-certificates-java
     stage-packages:
       - default-jdk
       - ca-certificates

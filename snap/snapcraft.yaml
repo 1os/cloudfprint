@@ -51,6 +51,8 @@ parts:
       - on armhf: https://cloudfprint.blob.core.windows.net/client/armhf.zip
       - on arm64: https://cloudfprint.blob.core.windows.net/client/arm64.zip
     source-type: zip
+    stage-packages:
+      - libqt5gui5
     after: [assets]
   eou:
     plugin: dump

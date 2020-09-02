@@ -24,12 +24,12 @@ apps:
       PATH: $JAVA_HOME/jre/bin:$PATH:$SNAP/libs/
     daemon: simple
     restart-condition: always
-    plugs: [network, network-bind, raw-usb, hardware-observe, io-ports-control]
+    plugs: [network, network-bind, raw-usb, hardware-observe, io-ports-control, serial-port]
   eou:
     command: eou/EthOverUsb.sh -e
     daemon: simple
     restart-condition: always
-    plugs: [network, network-bind, raw-usb, hardware-observe, io-ports-control]
+    plugs: [network, network-bind, raw-usb, hardware-observe, io-ports-control, serial-port]
 
 parts:
 #  jar:
@@ -39,6 +39,9 @@ parts:
     source: assets/
     plugin: dump
 #    after: [jar]
+    build-packages:
+      - ca-certificates
+      - ca-certificates-java
     stage-packages:
       - default-jdk
       - ca-certificates
@@ -51,6 +54,9 @@ parts:
       - on armhf: https://cloudfprint.blob.core.windows.net/client/armhf.zip
       - on arm64: https://cloudfprint.blob.core.windows.net/client/arm64.zip
     source-type: zip
+    stage-packages:
+      - libqt5gui5
+      - zlib1g
     after: [assets]
   eou:
     plugin: dump

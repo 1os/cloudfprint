@@ -6,7 +6,7 @@ architectures:
   - build-on: amd64
   - build-on: armhf
   - build-on: arm64
-version: '2020.08.24'
+version: '2020.09.02'
 summary: Bitrix24 Cloud POS # 79 char long summary
 description: |
   This app connect your POS to Bitrix24

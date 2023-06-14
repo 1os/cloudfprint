@@ -6,7 +6,7 @@ architectures:
   - build-on: amd64
   - build-on: armhf
   - build-on: arm64
-version: '2022.03.04'
+version: '2023.06.14'
 summary: Bitrix24 Cloud POS # 79 char long summary
 description: |
   This app connect your POS to Bitrix24
@@ -22,6 +22,7 @@ apps:
     environment:
       JAVA_HOME: $SNAP/usr/lib/jvm/java-11-openjdk-$SNAP_ARCH
       PATH: $JAVA_HOME/jre/bin:$PATH:$SNAP/libs/
+      DTO10_LOG_CONFIG_FILE: $SNAP_COMMON
     daemon: simple
     restart-condition: always
     plugs: [network, network-bind, raw-usb, hardware-observe, io-ports-control, serial-port]

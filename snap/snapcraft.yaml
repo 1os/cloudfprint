@@ -1,5 +1,5 @@
 name: cloudfprint
-base: core18
+base: core22
 #title: Bitrix24 Cloud Cash Machine
 architectures:
   - build-on: i386
@@ -22,7 +22,6 @@ apps:
     environment:
       JAVA_HOME: $SNAP/usr/lib/jvm/java-11-openjdk-$SNAP_ARCH
       PATH: $JAVA_HOME/jre/bin:$PATH:$SNAP/libs/
-      DTO10_LOG_CONFIG_FILE: $SNAP_COMMON
     daemon: simple
     restart-condition: always
     plugs: [network, network-bind, raw-usb, hardware-observe, io-ports-control, serial-port]
